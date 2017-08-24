@@ -6,7 +6,7 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
 
-// you need [ski]npm run dev:start && [ski-playground]npm link ski-ui first
+// you need [ski]yarn link && [ski-playground]yarn link ski-ui
 /* eslint import/no-extraneous-dependencies: 0 */
 import { button } from 'ski-ui'
 
