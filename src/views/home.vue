@@ -1,5 +1,9 @@
 <template>
-  <p>Ski Playground</p>
+  <p>
+    Ski Playground
+    <s-button @s-clickBtn="login">登录</s-button>
+    <s-button @s-clickBtn="back">返回</s-button>
+  </p>
 </template>
 
 <script>
@@ -32,6 +36,14 @@ export default class Me extends Vue {
 
   async createHook() {
     await console.log(`hook created for ${this.msg}!`)
+  }
+
+  back() {
+    this.$router.back(-1)
+  }
+
+  login() {
+    this.$router.push('/#/login')
   }
 }
 </script>
