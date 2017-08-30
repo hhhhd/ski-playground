@@ -1,8 +1,9 @@
 <template>
   <p>
     Ski Playground
-    <s-button @s-clickBtn="login">登录</s-button>
-    <s-button @s-clickBtn="back">返回</s-button>
+    <s-input></s-input>
+    <s-button>登录</s-button>
+    <s-button>返回</s-button>
   </p>
 </template>
 
@@ -12,14 +13,15 @@ import Component from 'vue-class-component'
 
 // you need [ski]yarn link && [ski-playground]yarn link ski-ui
 /* eslint import/no-extraneous-dependencies: 0 */
-import { button } from 'ski-ui'
+import { button, input } from 'ski-ui'
 
 @Component({
   props: {
     value: String,
   },
   components: {
-    's-button': button
+    's-button': button,
+    's-input': input
   }
 })
 export default class Me extends Vue {
@@ -36,14 +38,6 @@ export default class Me extends Vue {
 
   async createHook() {
     await console.log(`hook created for ${this.msg}!`)
-  }
-
-  back() {
-    this.$router.back(-1)
-  }
-
-  login() {
-    this.$router.push('/#/login')
   }
 }
 </script>
