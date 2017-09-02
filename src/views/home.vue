@@ -1,7 +1,7 @@
 <template>
   <p>
-    Ski Playground
-    <s-switching v-model="isOn"></s-switching>
+    Ski Playground 
+    <s-switching v-model="isChange"></s-switching>
     <button @click="aaa"></button>
   </p>
 </template>
@@ -23,9 +23,9 @@ import { switching } from 'ski-ui'
   }
 })
 export default class Me extends Vue {
-  isOn = null
+  isChange = true
   aaa() {
-    console.log(this.isOn)
+    console.log(this.isChange)
   }
 }
 </script>
