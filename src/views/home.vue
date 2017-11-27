@@ -1,8 +1,7 @@
 <template>
   <p>
     Ski Playground 
-    <s-switching v-model="isChange"></s-switching>
-    <button @click="aaa"></button>
+    <s-button>我是文字</s-button>
   </p>
 </template>
 
@@ -12,20 +11,23 @@ import Component from 'vue-class-component'
 
 // you need [ski]yarn link && [ski-playground]yarn link ski-ui
 /* eslint import/no-extraneous-dependencies: 0 */
-import { switching } from 'ski-ui'
+import { button } from 'ski-ui'
 
 @Component({
   props: {
     value: String,
   },
   components: {
-    's-switching': switching
+    's-button': button
   }
 })
 export default class Me extends Vue {
-  isChange = true
-  aaa() {
-    console.log(this.isChange)
+  checked = 1
+
+  change() {
+    setTimeout(() => {
+      this.checked = !this.checked
+    }, 0)
   }
 }
 </script>
